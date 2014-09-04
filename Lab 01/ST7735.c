@@ -15,7 +15,7 @@
   Written by Limor Fried/Ladyada for Adafruit Industries.
   MIT license, all text above must be included in any redistribution
  ****************************************************/
-
+#define DOUCHEBAG -1
 // ST7735.c
 // Runs on LM4F120/TM4C123
 // Low level drivers for the ST7735 160x128 LCD based off of
