@@ -467,6 +467,11 @@ const uint16_t Logo[] = {
 
 int main(void)
 {
+  uint32_t j;
+  PLL_Init();
+  ST7735_InitR(INITR_REDTAB);
+//  while(1)
+//	{
 	char test1[6];
 	char test2[6];
 	char test3[6];
@@ -479,6 +484,10 @@ int main(void)
 	Fixed_uDecOut2(99, test2);
 	Fixed_uDecOut2(456, test3);
 	Fixed_uDecOut2(100000, test4);
+	printf("%s\n", test1);
+	printf("%s\n", test2);
+	printf("%s\n", test3);
+	printf("%s\n", test4);
 
 	Fixed_sDecOut3s(-10000, test1);
 	Fixed_sDecOut3s(-9999, test2);
@@ -487,6 +496,13 @@ int main(void)
 	Fixed_sDecOut3s(123, test5);
 	Fixed_sDecOut3s(9999, test6);          
 	Fixed_sDecOut3s(10000, test7);
+	printf("%s\n", test1);
+	printf("%s\n", test2);
+	printf("%s\n", test3);
+	printf("%s\n", test4);
+	printf("%s\n", test5);
+	printf("%s\n", test6);
+	printf("%s\n", test7);
    
 	Fixed_uBinOut8(0, test1);
 	Fixed_uBinOut8(2, test2);
@@ -495,7 +511,15 @@ int main(void)
 	Fixed_uBinOut8(512, test5);
 	Fixed_uBinOut8(255997, test6);
 	Fixed_uBinOut8(256000, test7);
+	printf("%s\n", test1);
+	printf("%s\n", test2);
+	printf("%s\n", test3);
+	printf("%s\n", test4);
+	printf("%s\n", test5);
+	printf("%s\n", test6);
+	printf("%s\n", test7);
 
+//}
 }
 
 /* int main0(void){
@@ -505,7 +529,8 @@ int main(void)
   while(1){
   }
 } 
-int main(void){uint32_t j;
+int main(void){
+  uint32_t j;
   PLL_Init();
   ST7735_InitR(INITR_REDTAB);
   ST7735_OutString("Graphics test\n");
