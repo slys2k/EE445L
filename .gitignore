@@ -36,17 +36,17 @@ Icon
 .Trashes
 
 # Build files
-.o
-.d
-.crf
-.exe
-.bak
-.axf
-.htm
-.html
-.crf
-.dep
-.iex
-.map
-.lnp
-.lst
+/Lab*/*.o
+/Lab*/*.d
+/Lab*/*.crf
+/Lab*/*.exe
+/Lab*/*.bak
+/Lab*/*.axf
+/Lab*/*.htm
+/Lab*/*.html
+/Lab*/*.crf
+/Lab*/*.dep
+/Lab*/*.iex
+/Lab*/*.map
+/Lab*/*.lnp
+/Lab*/*.lst

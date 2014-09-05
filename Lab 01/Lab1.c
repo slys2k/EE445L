@@ -489,6 +489,7 @@ int main(void)
 	printf("%s\n", test3);
 	printf("%s\n", test4);
 
+	
 	Fixed_sDecOut3s(-10000, test1);
 	Fixed_sDecOut3s(-9999, test2);
 	Fixed_sDecOut3s(-1, test3);
