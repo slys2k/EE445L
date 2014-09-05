@@ -34,3 +34,19 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+# Build files
+*.o
+*.d
+*.crf
+*.exe
+*.bak
+*.axf
+*.htm
+*.html
+*.crf
+*.dep
+*.iex
+*.map
+*.lnp
+*.lst
