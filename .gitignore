@@ -34,3 +34,9 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+*.uvopt
+*.bak
+*.Omar
+*.htm
+Lab 01/Lab1.uvopt
