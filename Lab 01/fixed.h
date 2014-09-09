@@ -16,7 +16,7 @@
    102 to "  1.02" 
     31 to "  0.31" 
 100000 to "***.**"    */ 
-void Fixed_uDecOut2(uint32_t n, char *string);
+void Fixed_uDecOut2(uint32_t n);
 
 /****************Fixed_sDecOut3s***************
  converts fixed point number to ASCII string
@@ -31,7 +31,7 @@ void Fixed_uDecOut2(uint32_t n, char *string);
     31 to " 0.031" 
    
  */ 
-void Fixed_sDecOut3s(int32_t n, char *string);
+void Fixed_sDecOut3s(int32_t n);
 
 /**************Fixed_uBinOut8***************
  unsigned 32-bit binary fixed-point with a resolution of 1/256. 
@@ -53,4 +53,4 @@ Parameter LCD display
 255997	999.99
 256000	***.**
 */
-void Fixed_uBinOut8(uint32_t n, char *string); 
+void Fixed_uBinOut8(uint32_t n); 

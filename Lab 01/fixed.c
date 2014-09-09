@@ -20,17 +20,21 @@
    102 to "  1.02" 
     31 to "  0.31" 
 100000 to "***.**"    */ 
-void Fixed_uDecOut2(uint32_t n, char *string)
+void Fixed_uDecOut2(uint32_t n)
 {
+	 char result[6];
+	
    // check for valid input
    if(n > 99999)
    {
-      string[5] = '*';
-      string[4] = '*';
-      string[3] = '.';
-      string[2] = '*';
-      string[1] = '*';
-      string[0] = '*';
+      result[5] = '*';
+      result[4] = '*';
+      result[3] = '.';
+      result[2] = '*';
+      result[1] = '*';
+      result[0] = '*';
+
+  	  printf("%s\n", result);
       return;
    }
 
@@ -42,35 +46,36 @@ void Fixed_uDecOut2(uint32_t n, char *string)
    {
       int remainder = n % 10;
       n = n / 10;
-      string[count] = (char) remainder + 0x30;
+      result[count] = (char) remainder + 0x30;
       count--;
    }
    while(count == 3)
    {
-      string[count] = '.';
+      result[count] = '.';
       count--;
    }
    while(count == 2)
    {
       int remainder = n % 10;
       n = n / 10;
-      string[count] = (char) remainder + 0x30;
+      result[count] = (char) remainder + 0x30;
       count--;
    }
    while(count >= 0)
    {
       if(n == 0)
       {
-         string[count] = ' ';
+         result[count] = ' ';
       }
       else
       {
          int remainder = n % 10;
          n = n / 10;
-         string[count] = (char) remainder + 0x30;
+         result[count] = (char) remainder + 0x30;
       }
       count--;
    }
+	 printf("%s\n", result);
    return;
 }
 
@@ -87,18 +92,22 @@ void Fixed_uDecOut2(uint32_t n, char *string)
     31 to " 0.031" 
    
  */ 
-void Fixed_sDecOut3s(int32_t n, char *string)
+void Fixed_sDecOut3s(int32_t n)
 {
-   // check for valid input
+	 char result[6];
+	
+    // check for valid input
    if(n > 9999 || n < -9999)
    {
-      string[5] = '*';
-      string[4] = '*';
-      string[3] = '*';
-      string[2] = '.';
-      string[1] = '*';
-      string[0] = ' ';
-      return;
+      result[5] = '*';
+      result[4] = '*';
+      result[3] = '*';
+      result[2] = '.';
+      result[1] = '*';
+      result[0] = ' ';
+
+			printf("%s\n", result);
+		  return;
    }
 
    // negative flag
@@ -117,33 +126,34 @@ void Fixed_sDecOut3s(int32_t n, char *string)
    {
       int remainder = n % 10;
       n = n / 10;
-      string[count] = (char) remainder + 0x30;
+      result[count] = (char) remainder + 0x30;
       count--;
    }
    while(count == 2)
    {
-      string[count] = '.';
+      result[count] = '.';
       count--;
    }
    while(count == 1)
    {
       int remainder = n % 10;
       n = n / 10;
-      string[count] = (char) remainder + 0x30;
+      result[count] = (char) remainder + 0x30;
       count--;
    }
    while(count == 0)
    {
       if(neg)
       {
-         string[count] = '-';
+         result[count] = '-';
       }
       else
       {
-         string[count] = ' ';
+         result[count] = ' ';
       }
       count--;
    }
+	 printf("%s\n", result);
    return;
 }
 
@@ -167,18 +177,22 @@ Parameter LCD display
 255997	999.99
 256000	***.**
 */
-void Fixed_uBinOut8(uint32_t n, char *string)
+void Fixed_uBinOut8(uint32_t n)
 {
-   // check for valid input
+	 char result[6];
+	
+    // check for valid input
    if(n >= 256000)
    {
-      string[5] = '*';
-      string[4] = '*';
-      string[3] = '.';
-      string[2] = '*';
-      string[1] = '*';
-      string[0] = '*';
-      return;
+      result[5] = '*';
+      result[4] = '*';
+      result[3] = '.';
+      result[2] = '*';
+      result[1] = '*';
+      result[0] = '*';
+		 
+			printf("%s\n", result);
+	    return;
    }
 
    // convert n to a decimal integer
@@ -192,35 +206,36 @@ void Fixed_uBinOut8(uint32_t n, char *string)
    {
       int remainder = n % 10;
       n = n / 10;
-      string[count] = (char) remainder + 0x30;
+      result[count] = (char) remainder + 0x30;
       count--;
    }
    while(count == 3)
    {
-      string[count] = '.';
+      result[count] = '.';
       count--;
    }
    while(count == 2)
    {
       int remainder = n % 10;
       n = n / 10;
-      string[count] = (char) remainder + 0x30;
+      result[count] = (char) remainder + 0x30;
       count--;
    }
    while(count >= 0)
    {
       if(n == 0)
       {
-         string[count] = ' ';
+         result[count] = ' ';
       }
       else
       {
          int remainder = n % 10;
          n = n / 10;
-         string[count] = (char) remainder + 0x30;
+         result[count] = (char) remainder + 0x30;
       }
       count--;
    }
+	 printf("%s\n", result);
    return;
 }
 
