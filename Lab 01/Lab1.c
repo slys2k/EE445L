@@ -15,19 +15,23 @@
 int main(void){ // possible main program that tests your functions
   PLL_Init();
   ST7735_InitR(INITR_REDTAB);
-  for(int i=0; i<110000; i=i+902)
+/*  for(int i=0; i<110000; i=i+902)
   {
 			printf("%d gives: ", i);
       Fixed_uDecOut2(i);
   }
-/*  for(int i=-11000; i<11000; i=i+71)
+  for(int i=-11000; i<11000; i=i+71)
   {
 			printf("%d gives: ", i);
       Fixed_sDecOut3s(i);
   }
-  for(int i=0x00; i<110000; i=i+0xA21)
+*/  for(int i=0x00000000; i<257000; i=i+0xA21)
   {
-			printf("%d gives: ", i);
+		  printf("Binary %d gives \n", i);
+			int decimal_int = ((i * 100 + 128) / 256);
+			printf("decimal %d, which\n", decimal_int);
+		  printf("gives: ");
       Fixed_uBinOut8(i);
-  }*/
+			printf("\n");
+  }
 }
