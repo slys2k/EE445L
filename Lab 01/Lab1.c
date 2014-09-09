@@ -15,6 +15,23 @@
 int main(void){ // possible main program that tests your functions
   PLL_Init();
   ST7735_InitR(INITR_REDTAB);
+	
+	uint32_t uDecOut2[8] = {
+		0,
+		12,
+		345,
+		678,
+		910,
+		99999,
+		100000,
+		1000000
+		};
+	
+	for(int i=0; i<8; i++)
+	{
+		printf("%d gives:\n", uDecOut2[i]);
+		Fixed_uDecOut2(uDecOut2[i]);
+	}
 /*  for(int i=0; i<110000; i=i+902)
   {
 			printf("%d gives: ", i);
@@ -25,7 +42,7 @@ int main(void){ // possible main program that tests your functions
 			printf("%d gives: ", i);
       Fixed_sDecOut3s(i);
   }
-*/  for(int i=0x00000000; i<257000; i=i+0xA21)
+  for(int i=0x00000000; i<257000; i=i+0xA21)
   {
 		  printf("Binary %d gives \n", i);
 			int decimal_int = ((i * 100 + 128) / 256);
@@ -34,4 +51,5 @@ int main(void){ // possible main program that tests your functions
       Fixed_uBinOut8(i);
 			printf("\n");
   }
+*/
 }
