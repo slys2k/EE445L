@@ -5,9 +5,45 @@
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
 
-*.uvopt
+# Libraries
+*.lib
+*.a
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Build files
+*.exe
 *.bak
+*.axf
+*.htm
+*.html
+*.crf
+*.dep
+*.iex
+*.map
+*.lnp
+*.lst
+*.d
+*.o
+*.uvopt
 *.Omar
 *.htm
 Lab 01/Lab1.uvopt
